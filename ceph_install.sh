@@ -33,4 +33,4 @@ type=rpm-md
 gpgkey=https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
 EOM
 
-yum install -y ceph ceph-mds ceph-fuse
+# yum install -y ceph ceph-mds ceph-fuse

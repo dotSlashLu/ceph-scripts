@@ -1,6 +1,6 @@
 if [ ! -d /etc/ceph ]; then
-    cp ./conf /etc/ceph
-    cp ./lib /var/lib/ceph
+    cp -r ./conf /etc/ceph
+    cp -r ./lib /var/lib/ceph
 fi
 
 IP_PREFIX=10.3
@@ -16,7 +16,7 @@ ip=$IP_PREFIX.`hostname | gawk -F '-' '{print $5}'`
 echo "got ip $ip"
 
 # mon_idx=$(grep "\[mon." /etc/ceph/ceph.conf | tail -1 | sed 's/[^0-9]*//g')
-# if [ -z $mon_idx ]; then 
+# if [ -z $mon_idx ]; then
 #     # because we already have a initial mon
 #     # the index starts at 1
 #     mon_idx=1
